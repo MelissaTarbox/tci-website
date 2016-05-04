@@ -22,3 +22,10 @@
 	line-height: 25px;
 	color: #006699;
 }
+
+/**** RESPONSIVE CSS ****/
+
+@media (min-width: 768px) {
+
+
+@media (min-width: 992px) {
