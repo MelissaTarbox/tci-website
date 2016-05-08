@@ -1,31 +1,94 @@
-.navigation {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 16px;
-	font-weight: normal;
-	color: #FFFFFF;
-}
-.Header_01 {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 24px;
-	color: #006699;
-}
-.body {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	font-style: normal;
-	line-height: 25px;
-	color: #333333;
-}
-.body_link {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	line-height: 25px;
-	color: #006699;
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-bottom: 40px;
+  color: #737373;
+  font-family: 'Vollkorn', serif;
 }
 
-/**** RESPONSIVE CSS ****/
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: #e6e6e6;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+.container {
+  text-align: right;
+}
+.dropdown-menu {
+  text-align: right;
+}
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #7e7e7e;
+}
+.carousel-inner > .item > img {
+  position:absolute;
+  top: 0;
+  left:14%;
+  min-width: 70%;
+  height: 500px;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
 
 @media (min-width: 768px) {
-
+/** navbar positioning**/
+ .navbar-wrapper {
+  top-margin: 20px;
+}
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .dropdown-menu {
+    text-align: left;
+  }
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+}
 
 @media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
